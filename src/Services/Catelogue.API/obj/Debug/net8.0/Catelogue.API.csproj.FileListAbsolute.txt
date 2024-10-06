@@ -31,3 +31,10 @@ E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\obj\Debug\net8.0\r
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\obj\Debug\net8.0\Catelogue.API.pdb
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\obj\Debug\net8.0\Catelogue.API.genruntimeconfig.cache
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\obj\Debug\net8.0\ref\Catelogue.API.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\DnsClient.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoDB.Bson.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoDB.Driver.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoDB.Driver.Core.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoRepo.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\SharpCompress.dll
