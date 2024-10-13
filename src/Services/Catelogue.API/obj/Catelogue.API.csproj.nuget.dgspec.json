@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CoreApiResponse": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "MongoRepo": {
               "target": "Package",
               "version": "[1.0.6, )"

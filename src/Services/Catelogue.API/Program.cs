@@ -1,4 +1,6 @@
 using Catelogue.API.AppHostedServices;
+using Catelogue.API.Interface.Manager;
+using Catelogue.API.Manager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHostedService<AppHostedServices>();
+builder.Services.AddScoped<IProductManager, ProductManager>();
 
 var app = builder.Build();
 
