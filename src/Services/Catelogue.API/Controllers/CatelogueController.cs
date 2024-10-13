@@ -22,8 +22,18 @@ namespace Catelogue.API.Controllers
         [ResponseCache(Duration = 30)]
         public IActionResult GetProducts()
         {
-            var products = _productManager.GetAll();
-            return CustomResult("Succeed", products, HttpStatusCode.OK);
+            try
+            {
+                var products = _productManager.GetAll();
+                return CustomResult("Succeed", products, HttpStatusCode.OK);
+
+            }
+            catch (Exception e)
+            {
+
+                return CustomResult(e.Message, HttpStatusCode.OK);
+
+            }
         }
     }
 }

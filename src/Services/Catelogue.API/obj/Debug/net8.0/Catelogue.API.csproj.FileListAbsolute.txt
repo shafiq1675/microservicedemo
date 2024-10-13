@@ -38,3 +38,7 @@ E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\M
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\MongoRepo.dll
 E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\SharpCompress.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\CoreApiResponse.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\prj\shafiq1675\microservicedemo\src\Services\Catelogue.API\bin\Debug\net8.0\Newtonsoft.Json.dll
