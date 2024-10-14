@@ -3,6 +3,7 @@ using Catelogue.API.Models;
 using CoreApiResponse;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using System.Net;
 
 namespace Catelogue.API.Controllers
@@ -28,11 +29,55 @@ namespace Catelogue.API.Controllers
                 return CustomResult("Succeed", products, HttpStatusCode.OK);
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
+            }
+        }
 
-                return CustomResult(e.Message, HttpStatusCode.OK);
+        [HttpPost]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.Created)]
+        public IActionResult PostProducts([FromBody] Product product)
+        {
+            try
+            {
+                product.Id = ObjectId.GenerateNewId().ToString();
+                bool isSaved = _productManager.Add(product);
+                return CustomResult("Succeed", isSaved, HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
+            }
+        }
 
+        [HttpPut]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
+        public IActionResult UpdateProducts([FromBody] Product product)
+        {
+            try
+            {
+                bool idUpdate = _productManager.Update(product.Id, product);
+                return CustomResult("Succeed", idUpdate, HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
+            }
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.Created)]
+        public IActionResult DeleteProducts(string id)
+        {
+            try
+            {
+                bool isDelete = _productManager.Delete(id);
+                return CustomResult("Succeed", isDelete, HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
             }
         }
     }
