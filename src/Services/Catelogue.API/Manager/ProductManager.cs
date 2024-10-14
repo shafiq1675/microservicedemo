@@ -12,5 +12,11 @@ namespace Catelogue.API.Manager
         {
 
         }
+        public List<Product> GetProductByCategory(string category)
+        {
+            var products = GetAll(x=>x.Category ==  category).ToList();
+            return products;
+        }
+
     }
 }

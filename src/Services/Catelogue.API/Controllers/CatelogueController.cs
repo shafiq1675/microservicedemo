@@ -21,6 +21,39 @@ namespace Catelogue.API.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         [ResponseCache(Duration = 30)]
+        public IActionResult GetProductByCategory(string category)
+        {
+            try
+            {
+                var products = _productManager.GetProductByCategory(category);
+                return CustomResult("Succeed", products, HttpStatusCode.OK);
+
+            }
+            catch (Exception ex)
+            {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
+            }
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
+        public IActionResult GetProduct(string id)
+        {
+            try
+            {
+                Product product = _productManager.GetById(id);
+                return CustomResult("Succeed", product, HttpStatusCode.OK);
+
+            }
+            catch (Exception ex)
+            {
+                return CustomResult(ex.Message, HttpStatusCode.BadRequest);
+            }
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
+        [ResponseCache(Duration = 30)]
         public IActionResult GetProducts()
         {
             try

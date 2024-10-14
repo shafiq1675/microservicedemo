@@ -5,5 +5,6 @@ namespace Catelogue.API.Interface.Manager
 {
     public interface IProductManager:ICommonManager<Product>
     {
+        public List<Product> GetProductByCategory(string category);
     }
 }
