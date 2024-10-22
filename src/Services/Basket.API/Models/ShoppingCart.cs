@@ -10,7 +10,7 @@
             this.UserName = userName;
         }
         public string UserName { get; set; }
-        List<ShoppingCartItem> Items { get; set; } = new List<ShoppingCartItem>();
+        public List<ShoppingCartItem> Items { get; set; } = new List<ShoppingCartItem>();
         public decimal TotalPrice
         {
             get
