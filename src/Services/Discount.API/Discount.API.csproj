@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="CoreApiResponse" Version="1.0.1" />
+	  <PackageReference Include="dapper" Version="2.1.35" />
+    <PackageReference Include="npgsql" Version="8.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 </Project>
