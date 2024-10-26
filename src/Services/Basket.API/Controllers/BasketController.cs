@@ -38,6 +38,7 @@ namespace Basket.API.Controllers
         {
             try
             {
+
                 var response = await _basketRepository.UpdateShoppingCart(shoppingCart);
                 return CustomResult("Success", response);
             }
