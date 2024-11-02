@@ -66,7 +66,7 @@ namespace Discount.GRPC.Services
             var response = await _couponRepository.DeleteDiscount(request.ProductId);
             if (response)
             {
-                _logger.LogInformation("Discount is Deleted for Product Name:{productName}, Amount: {amount}", coupon.ProductName, coupon.Amount);
+                _logger.LogInformation("Discount is Deleted.");
             }
             else
             {
